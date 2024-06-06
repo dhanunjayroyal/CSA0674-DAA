@@ -1,0 +1,15 @@
+def sortArray(nums):
+    next_odd = 1
+    next_even = 0
+
+    while next_odd < len(nums) and next_even < len(nums):
+        if nums[next_even] % 2 == 0:
+            next_even += 2
+        elif nums[next_odd] % 2 != 0:
+            next_odd += 2
+        else:
+            nums[next_odd], nums[next_even] = nums[next_even], nums[next_odd]
+            next_odd += 2
+            next_even += 2
+
+    return nums
