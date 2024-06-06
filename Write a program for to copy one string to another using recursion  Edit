@@ -1,0 +1,14 @@
+def copy_string(src, dest, i):
+    if i == len(src):
+        dest[i] = '\0'
+        return
+    else:
+        dest[i] = src[i]
+        copy_string(src, dest, i+1)
+
+src = input("Enter a string: ")
+dest = [''] * (len(src) + 1)
+
+copy_string(src, dest, 0)
+
+print("Copied string:", ''.join(dest))
