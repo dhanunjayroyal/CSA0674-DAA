@@ -1,0 +1,13 @@
+def find_largest(arr, n, max_val):
+    if n == 0:
+        return max_val
+    else:
+        if arr[n-1] > max_val:
+            max_val = arr[n-1]
+        return find_largest(arr, n-1, max_val)
+
+arr = [12, 45, 7, 23, 56, 89, 34]
+n = len(arr)
+
+max_val = find_largest(arr, n, arr[0])
+print("The largest element in the array is", max_val)
