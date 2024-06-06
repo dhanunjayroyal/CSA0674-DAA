@@ -1,0 +1,9 @@
+def reverse_string(s, i):
+    if i == len(s):
+        return
+    else:
+        reverse_string(s, i+1)
+        print(s[i], end="")
+
+s = input("Enter a string: ")
+reverse_string(s, 0)
