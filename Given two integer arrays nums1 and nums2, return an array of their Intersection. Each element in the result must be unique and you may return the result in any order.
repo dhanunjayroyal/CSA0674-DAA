@@ -1,0 +1,19 @@
+def arrayIntersection(nums1, nums2):
+    def binarySearch(arr, target):
+        l, r = 0, len(arr)
+        while l <= r:
+            mid = l + (r - l) // 2
+            if arr[mid] == target:
+                return mid
+            elif arr[mid] > target:
+                r = mid - 1
+            else:
+                l = mid + 1
+        return -1
+
+    nums2.sort()
+    intersection = []
+    for num in nums1:
+        if binarySearch(nums2, num)!= -1:
+            intersection.append(num)
+    return intersection
