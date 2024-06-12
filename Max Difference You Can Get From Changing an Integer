@@ -1,0 +1,7 @@
+def maxDiff(num):
+    sorted_num = int(''.join(sorted(str(num))))
+    reversed_num = int(''.join(sorted(str(num), reverse=True)))
+    return reversed_num - sorted_num
+
+num = 123456
+print(maxDiff(num))
