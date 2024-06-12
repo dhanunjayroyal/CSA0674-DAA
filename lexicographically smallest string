@@ -1,0 +1,7 @@
+def lexicographically_smallest_string(s):
+    return ''.join(sorted(s))
+
+# Test the function
+input_string = "cabed"
+result = lexicographically_smallest_string(input_string)
+print(result)
