@@ -1,0 +1,7 @@
+def check_if_breaks(s1, s2):
+    sorted_s1 = ''.join(sorted(s1))
+    sorted_s2 = ''.join(sorted(s2))
+    return all(c1 >= c2 for c1, c2 in zip(sorted_s1, sorted_s2)) or all(c1 <= c2 for c1, c2 in zip(sorted_s1, sorted_s2))
+s1 = "abc"
+s2 = "xya"
+print(check_if_breaks(s1, s2))  
