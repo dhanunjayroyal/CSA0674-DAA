@@ -1,0 +1,8 @@
+import random
+import re
+
+def replace_question_marks(s):
+    return re.sub(r'\?', lambda x: random.choice('abcdefghijklmnopqrstuvwxyz'), s)
+s = "Hello, World! What's the answer to life, the universe, and everything?"
+result = replace_question_marks(s)
+print(result)
