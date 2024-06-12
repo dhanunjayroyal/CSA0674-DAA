@@ -1,0 +1,13 @@
+def string_shift(s, shift):
+    for direction, amount in shift:
+        if direction == 0:
+            s = s[amount:] + s[:amount]
+        else:
+            s = s[-amount:] + s[:-amount]
+    return s
+
+# Example
+s = "hello"
+shift = [(0, 1), (1, 2)]
+result = string_shift(s, shift)
+print(result)  # Output: "lohel"
